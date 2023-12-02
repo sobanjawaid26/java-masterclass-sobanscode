@@ -15,4 +15,19 @@ public class BankAccount {
         }
         return BigDecimal.ZERO;
     }
+
+    public BankAccount(String name) {
+        this.name = name;
+        this.hasOverdraft = false;
+        this.balance = BigDecimal.ZERO;
+    }
+
+    public BankAccount() {
+    }
+
+    public BankAccount(String name, BigDecimal balance, boolean hasOverdraft) {
+        this.name = name;
+        this.hasOverdraft = hasOverdraft;
+        this.balance = balance;
+    }
 }
